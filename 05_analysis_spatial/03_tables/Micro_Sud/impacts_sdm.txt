@@ -1,0 +1,49 @@
+Impact measures (mixed, exact):
+                                                         Direct
+ROI_percentuale dy/dx                               0.555767302
+integrazione_verticale dy/dx                       -0.290250000
+ROE_percentuale dy/dx                               0.415892313
+ROS_percentuale dy/dx                               0.078641819
+rendimento_dipendenti dy/dx                         0.034806206
+indice_indipendenza_finanziaria_percentuale dy/dx  -0.079726422
+log_ricavi_vendite_migl_EUR dy/dx                   0.082906663
+durata_media_debiti_lordo_IVA_gg dy/dx              0.064986869
+rapporto_indebitamento dy/dx                       -0.021666605
+valore_aggiunto_pro_capite_EUR dy/dx               -0.159635383
+durata_media_crediti_lordo_IVA_gg dy/dx            -0.008678165
+posizione_finanziaria_netta_migl_EUR dy/dx         -2.713307635
+indice_liquidita dy/dx                             -0.005794996
+patrimonio_netto_migl_EUR dy/dx                    -0.846670386
+utile_netto_migl_EUR dy/dx                        -22.629369734
+                                                       Indirect
+ROI_percentuale dy/dx                              -0.697194807
+integrazione_verticale dy/dx                       -0.301737021
+ROE_percentuale dy/dx                               1.252119595
+ROS_percentuale dy/dx                               0.153459036
+rendimento_dipendenti dy/dx                         0.015599883
+indice_indipendenza_finanziaria_percentuale dy/dx   0.276706292
+log_ricavi_vendite_migl_EUR dy/dx                   0.065602049
+durata_media_debiti_lordo_IVA_gg dy/dx              0.080497303
+rapporto_indebitamento dy/dx                       -0.122472016
+valore_aggiunto_pro_capite_EUR dy/dx               -0.151436151
+durata_media_crediti_lordo_IVA_gg dy/dx             0.002459094
+posizione_finanziaria_netta_migl_EUR dy/dx          7.470089847
+indice_liquidita dy/dx                             -0.013053815
+patrimonio_netto_migl_EUR dy/dx                     0.378867302
+utile_netto_migl_EUR dy/dx                        -30.612844909
+                                                          Total
+ROI_percentuale dy/dx                              -0.141427505
+integrazione_verticale dy/dx                       -0.591987021
+ROE_percentuale dy/dx                               1.668011908
+ROS_percentuale dy/dx                               0.232100855
+rendimento_dipendenti dy/dx                         0.050406089
+indice_indipendenza_finanziaria_percentuale dy/dx   0.196979870
+log_ricavi_vendite_migl_EUR dy/dx                   0.148508712
+durata_media_debiti_lordo_IVA_gg dy/dx              0.145484172
+rapporto_indebitamento dy/dx                       -0.144138621
+valore_aggiunto_pro_capite_EUR dy/dx               -0.311071535
+durata_media_crediti_lordo_IVA_gg dy/dx            -0.006219071
+posizione_finanziaria_netta_migl_EUR dy/dx          4.756782212
+indice_liquidita dy/dx                             -0.018848812
+patrimonio_netto_migl_EUR dy/dx                    -0.467803084
+utile_netto_migl_EUR dy/dx                        -53.242214643

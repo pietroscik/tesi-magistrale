@@ -1,0 +1,68 @@
+=== AUTOCORRELAZIONE RESIDUI ===
+
+	Moran I test under randomisation
+
+data:  res  
+weights: listw    
+
+Moran I statistic standard deviate = 0.30503, p-value =
+0.3802
+alternative hypothesis: greater
+sample estimates:
+Moran I statistic       Expectation          Variance 
+    -4.927610e-04     -3.289474e-03      8.406157e-05 
+
+
+	Monte-Carlo simulation of Moran I
+
+data:  res 
+weights: listw  
+number of simulations + 1: 200 
+
+statistic = -0.00049276, observed rank = 148, p-value =
+0.26
+alternative hypothesis: greater
+
+
+	Geary C test under randomisation
+
+data:  res 
+weights: listw   
+
+Geary C statistic standard deviate = -0.75213, p-value =
+0.774
+alternative hypothesis: Expectation greater than statistic
+sample estimates:
+Geary C statistic       Expectation          Variance 
+     1.0162662282      1.0000000000      0.0004677226 
+
+
+=== NORMALITÀ ===
+
+	Anderson-Darling normality test
+
+data:  res
+A = 1.1716, p-value = 0.004581
+
+
+=== ETEROSCHEDASTICITÀ ===
+
+=== LM ROBUST (su OLS) ===
+
+	Rao's score (a.k.a Lagrange multiplier) diagnostics for
+	spatial dependence
+
+data:  
+model: lm(formula = formula, data = data)
+test weights: listw
+
+RSerr = 0.1711, df = 1, p-value = 0.6791
+
+
+=== RESET (su OLS) ===
+
+	RESET test
+
+data:  lm_base
+RESET = 7.6898, df1 = 2, df2 = 287, p-value = 0.0005582
+

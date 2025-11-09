@@ -1,0 +1,5 @@
+=== LOG: robustezza_e_riepiloghi_finali ===
+Data/Ora avvio: 2025-11-09 12:37:12 
+
+Esecuzione controlli di robustezza finali...
+indexing riepilogo_regressivo_gwr.csv [======] 36.31MB/s, eta:  0s                                                                  Script di robustezza completati.

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Se utilizzi questo repository, cita la seguente fonte:"
+title: "Tesi Magistrale – Analisi spaziale delle performance economico-finanziarie delle imprese italiane"
+authors:
+  - family-names: "Maietta"
+    given-names: "Pietro"
+date-released: 2025-03-01
+version: "1.0.0"
+license: MIT
+type: software
+repository-code: "https://github.com/pietroscik/Tesi-Magistrale"

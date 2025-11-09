@@ -1,0 +1,448 @@
+
+> cat("===== ANALISI MODELLI: CAMPIONE, COMPLETO, PER DIMENSIONE =====\n\n")
+===== ANALISI MODELLI: CAMPIONE, COMPLETO, PER DIMENSIONE =====
+
+
+> cat("----- MODELLO COMPLETO (RIDOTTO STEPWISE) -----\n\n")
+----- MODELLO COMPLETO (RIDOTTO STEPWISE) -----
+
+
+> print(summary(model_reduced_full))
+
+Call:
+lm(formula = frm_new, data = data_all)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.46553 -0.21837  0.08048  0.23899  2.93764 
+
+Coefficients:
+                                             Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                 -0.240017   0.012715 -18.877  < 2e-16
+ROI_percentuale                              0.657173   0.004184 157.078  < 2e-16
+integrazione_verticale                      -0.348009   0.006810 -51.106  < 2e-16
+ROE_percentuale                              0.267219   0.003399  78.619  < 2e-16
+ROS_percentuale                             -0.080718   0.004530 -17.817  < 2e-16
+rendimento_dipendenti                       -0.059293   0.003436 -17.256  < 2e-16
+integrazione_verticale_fattBasso             0.135057   0.011236  12.020  < 2e-16
+integrazione_verticale_fattMedio             0.252118   0.013800  18.270  < 2e-16
+integrazione_verticale_fattAlto              0.356429   0.015936  22.366  < 2e-16
+integrazione_verticale_fattMolto Alto        0.332616   0.018948  17.554  < 2e-16
+indice_indipendenza_finanziaria_percentuale -0.090299   0.003875 -23.301  < 2e-16
+macroareaIsole                              -0.088421   0.013959  -6.334 2.42e-10
+macroareaNord-Est                            0.043830   0.007439   5.892 3.87e-09
+macroareaNord-Ovest                          0.055892   0.007092   7.881 3.39e-15
+macroareaSud                                -0.054055   0.009349  -5.782 7.49e-09
+log_ricavi_vendite_migl_EUR                  0.042834   0.002834  15.113  < 2e-16
+durata_media_debiti_lordo_IVA_gg            -0.037077   0.003076 -12.052  < 2e-16
+rapporto_indebitamento                       0.019167   0.002698   7.103 1.25e-12
+valore_aggiunto_pro_capite_EUR              -0.032887   0.003467  -9.485  < 2e-16
+durata_media_crediti_lordo_IVA_gg            0.009040   0.002808   3.219  0.00129
+posizione_finanziaria_netta_migl_EUR        -0.008304   0.002529  -3.284  0.00103
+indice_liquidita                             0.045866   0.003213  14.273  < 2e-16
+patrimonio_netto_migl_EUR                   -0.020165   0.004151  -4.858 1.19e-06
+utile_netto_migl_EUR                         0.016026   0.004048   3.959 7.53e-05
+                                               
+(Intercept)                                 ***
+ROI_percentuale                             ***
+integrazione_verticale                      ***
+ROE_percentuale                             ***
+ROS_percentuale                             ***
+rendimento_dipendenti                       ***
+integrazione_verticale_fattBasso            ***
+integrazione_verticale_fattMedio            ***
+integrazione_verticale_fattAlto             ***
+integrazione_verticale_fattMolto Alto       ***
+indice_indipendenza_finanziaria_percentuale ***
+macroareaIsole                              ***
+macroareaNord-Est                           ***
+macroareaNord-Ovest                         ***
+macroareaSud                                ***
+log_ricavi_vendite_migl_EUR                 ***
+durata_media_debiti_lordo_IVA_gg            ***
+rapporto_indebitamento                      ***
+valore_aggiunto_pro_capite_EUR              ***
+durata_media_crediti_lordo_IVA_gg           ** 
+posizione_finanziaria_netta_migl_EUR        ** 
+indice_liquidita                            ***
+patrimonio_netto_migl_EUR                   ***
+utile_netto_migl_EUR                        ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3846 on 25111 degrees of freedom
+Multiple R-squared:  0.8522,	Adjusted R-squared:  0.8521 
+F-statistic:  6297 on 23 and 25111 DF,  p-value: < 2.2e-16
+
+
+> cat("\n--- Statistiche di adattamento (glance) ---\n")
+
+--- Statistiche di adattamento (glance) ---
+
+> print(broom::glance(model_reduced_full))
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df  logLik    AIC    BIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>   <dbl>  <dbl>  <dbl>
+1     0.852         0.852 0.385     6297.       0    23 -11633. 23317. 23520.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+
+> cat("\n\n")
+
+
+
+> cat("----- MODELLO CAMPIONE -----\n\n")
+----- MODELLO CAMPIONE -----
+
+
+> print(summary(model_reduced))
+
+Call:
+lm(formula = frm_new, data = data_all)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.40298 -0.22686  0.08424  0.24477  2.80734 
+
+Coefficients:
+                                             Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                 -0.193310   0.025964  -7.445 1.13e-13
+ROI_percentuale                              0.627290   0.012852  48.809  < 2e-16
+integrazione_verticale                      -0.326893   0.015165 -21.555  < 2e-16
+ROE_percentuale                              0.261218   0.007647  34.158  < 2e-16
+ROS_percentuale                             -0.114779   0.011744  -9.773  < 2e-16
+rendimento_dipendenti                       -0.072055   0.007708  -9.348  < 2e-16
+integrazione_verticale_fattBasso             0.096773   0.025064   3.861 0.000114
+integrazione_verticale_fattMedio             0.200353   0.030839   6.497 9.01e-11
+integrazione_verticale_fattAlto              0.295728   0.035570   8.314  < 2e-16
+integrazione_verticale_fattMolto Alto        0.260851   0.042410   6.151 8.32e-10
+indice_indipendenza_finanziaria_percentuale -0.088849   0.009567  -9.287  < 2e-16
+indice_corrente                              0.046411   0.007498   6.190 6.50e-10
+log_ricavi_vendite_migl_EUR                  0.038804   0.005884   6.595 4.70e-11
+ROA_percentuale                              0.065122   0.016134   4.036 5.51e-05
+valore_aggiunto_pro_capite_EUR              -0.024108   0.007505  -3.212 0.001326
+rapporto_indebitamento                       0.022948   0.006475   3.544 0.000398
+incidenza_circolante_operativo_percentuale   0.087058   0.014236   6.115 1.04e-09
+giacenza_media_scorte_gg                    -0.069237   0.011802  -5.867 4.73e-09
+durata_media_crediti_lordo_IVA_gg           -0.045919   0.010097  -4.548 5.55e-06
+                                               
+(Intercept)                                 ***
+ROI_percentuale                             ***
+integrazione_verticale                      ***
+ROE_percentuale                             ***
+ROS_percentuale                             ***
+rendimento_dipendenti                       ***
+integrazione_verticale_fattBasso            ***
+integrazione_verticale_fattMedio            ***
+integrazione_verticale_fattAlto             ***
+integrazione_verticale_fattMolto Alto       ***
+indice_indipendenza_finanziaria_percentuale ***
+indice_corrente                             ***
+log_ricavi_vendite_migl_EUR                 ***
+ROA_percentuale                             ***
+valore_aggiunto_pro_capite_EUR              ** 
+rapporto_indebitamento                      ***
+incidenza_circolante_operativo_percentuale  ***
+giacenza_media_scorte_gg                    ***
+durata_media_crediti_lordo_IVA_gg           ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3824 on 4981 degrees of freedom
+Multiple R-squared:  0.8558,	Adjusted R-squared:  0.8553 
+F-statistic:  1643 on 18 and 4981 DF,  p-value: < 2.2e-16
+
+
+> cat("\n--- Statistiche di adattamento (glance) ---\n")
+
+--- Statistiche di adattamento (glance) ---
+
+> print(broom::glance(model_reduced))
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC deviance
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>    <dbl>
+1     0.856         0.855 0.382     1643.       0    18 -2279. 4598. 4728.     728.
+# ℹ 2 more variables: df.residual <int>, nobs <int>
+
+> cat("\n\n")
+
+
+
+> for (nm in names(modelli_per_dim)) {
++   modello <- modelli_per_dim[[nm]]
++   cat("---- MODELLO PER:", nm, "----\n\n")
++   print(summary(modello))
++ .... [TRUNCATED] 
+---- MODELLO PER: Micro ----
+
+
+Call:
+lm(formula = frm_new, data = data_all)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.79974 -0.29760 -0.02978  0.32997  1.30389 
+
+Coefficients:
+                                              Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                 -0.4000358  0.0265413 -15.072  < 2e-16
+integrazione_verticale                      -0.6351440  0.0298935 -21.247  < 2e-16
+ROE_percentuale                              0.4057506  0.0233603  17.369  < 2e-16
+indice_indipendenza_finanziaria_percentuale -0.2815152  0.0243834 -11.545  < 2e-16
+posizione_finanziaria_netta_migl_EUR        -0.1054056  0.0202909  -5.195 2.96e-07
+rendimento_dipendenti                       -0.0913288  0.0225740  -4.046 6.01e-05
+giacenza_media_scorte_gg                    -0.0379257  0.0206906  -1.833 0.067380
+durata_media_debiti_lordo_IVA_gg             0.0827590  0.0224027   3.694 0.000244
+ROA_percentuale                              0.4609828  0.0242174  19.035  < 2e-16
+EBITDA_migl_EUR                             -0.0004482  0.0001070  -4.187 3.33e-05
+                                               
+(Intercept)                                 ***
+integrazione_verticale                      ***
+ROE_percentuale                             ***
+indice_indipendenza_finanziaria_percentuale ***
+posizione_finanziaria_netta_migl_EUR        ***
+rendimento_dipendenti                       ***
+giacenza_media_scorte_gg                    .  
+durata_media_debiti_lordo_IVA_gg            ***
+ROA_percentuale                             ***
+EBITDA_migl_EUR                             ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4395 on 516 degrees of freedom
+Multiple R-squared:  0.885,	Adjusted R-squared:  0.883 
+F-statistic: 441.4 on 9 and 516 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento (glance) ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
+      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>
+1     0.885         0.883 0.440      441. 6.80e-236     9  -309.  640.  687.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+
+Variabili selezionate: integrazione_verticale, ROE_percentuale, indice_indipendenza_finanziaria_percentuale, posizione_finanziaria_netta_migl_EUR, rendimento_dipendenti, giacenza_media_scorte_gg, durata_media_debiti_lordo_IVA_gg, ROA_percentuale, EBITDA_migl_EUR 
+
+===========================================
+
+---- MODELLO PER: Piccola ----
+
+
+Call:
+lm(formula = frm_new, data = data_all)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.04557 -0.21876  0.05085  0.23822  2.74066 
+
+Coefficients:
+                                             Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                 -0.158242   0.016079  -9.841  < 2e-16
+ROI_percentuale                              0.563549   0.005547 101.603  < 2e-16
+integrazione_verticale                      -0.432428   0.009624 -44.933  < 2e-16
+ROE_percentuale                              0.269686   0.005383  50.102  < 2e-16
+patrimonio_netto_migl_EUR                   -0.093794   0.004904 -19.127  < 2e-16
+dipendenti                                   0.095218   0.004742  20.081  < 2e-16
+macroareaIsole                              -0.084288   0.020064  -4.201 2.68e-05
+macroareaNord-Est                            0.030945   0.011164   2.772 0.005584
+macroareaNord-Ovest                          0.051275   0.010570   4.851 1.25e-06
+macroareaSud                                -0.084012   0.013797  -6.089 1.18e-09
+integrazione_verticale_fattBasso             0.118736   0.015290   7.765 9.02e-15
+integrazione_verticale_fattMedio             0.212872   0.019076  11.159  < 2e-16
+integrazione_verticale_fattAlto              0.287451   0.021908  13.121  < 2e-16
+integrazione_verticale_fattMolto Alto        0.281082   0.025707  10.934  < 2e-16
+indice_indipendenza_finanziaria_percentuale -0.061576   0.006137 -10.034  < 2e-16
+indice_liquidita                             0.030205   0.005022   6.014 1.88e-09
+posizione_finanziaria_netta_migl_EUR        -0.028753   0.004405  -6.527 7.08e-11
+durata_media_crediti_lordo_IVA_gg            0.020604   0.004128   4.991 6.12e-07
+rendimento_dipendenti                       -0.047732   0.008737  -5.463 4.80e-08
+ricavi_pro_capite_EUR                        0.032329   0.009083   3.559 0.000373
+rapporto_indebitamento                       0.006812   0.003996   1.705 0.088273
+                                               
+(Intercept)                                 ***
+ROI_percentuale                             ***
+integrazione_verticale                      ***
+ROE_percentuale                             ***
+patrimonio_netto_migl_EUR                   ***
+dipendenti                                  ***
+macroareaIsole                              ***
+macroareaNord-Est                           ** 
+macroareaNord-Ovest                         ***
+macroareaSud                                ***
+integrazione_verticale_fattBasso            ***
+integrazione_verticale_fattMedio            ***
+integrazione_verticale_fattAlto             ***
+integrazione_verticale_fattMolto Alto       ***
+indice_indipendenza_finanziaria_percentuale ***
+indice_liquidita                            ***
+posizione_finanziaria_netta_migl_EUR        ***
+durata_media_crediti_lordo_IVA_gg           ***
+rendimento_dipendenti                       ***
+ricavi_pro_capite_EUR                       ***
+rapporto_indebitamento                      .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3488 on 9047 degrees of freedom
+Multiple R-squared:  0.8817,	Adjusted R-squared:  0.8814 
+F-statistic:  3372 on 20 and 9047 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento (glance) ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC deviance
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>    <dbl>
+1     0.882         0.881 0.349     3372.       0    20 -3306. 6657. 6813.    1101.
+# ℹ 2 more variables: df.residual <int>, nobs <int>
+
+Variabili selezionate: ROI_percentuale, integrazione_verticale, ROE_percentuale, patrimonio_netto_migl_EUR, dipendenti, macroarea, integrazione_verticale_fatt, indice_indipendenza_finanziaria_percentuale, indice_liquidita, posizione_finanziaria_netta_migl_EUR, durata_media_crediti_lordo_IVA_gg, rendimento_dipendenti, ricavi_pro_capite_EUR, rapporto_indebitamento 
+
+===========================================
+
+---- MODELLO PER: Media ----
+
+
+Call:
+lm(formula = frm_new, data = data_all)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.8999 -0.2102  0.0894  0.2378  2.4647 
+
+Coefficients:
+                                             Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                  0.178474   0.015464  11.541  < 2e-16
+ROI_percentuale                              0.690428   0.006544 105.507  < 2e-16
+ROE_percentuale                              0.268754   0.005091  52.790  < 2e-16
+ROS_percentuale                             -0.088665   0.007416 -11.956  < 2e-16
+rendimento_dipendenti                       -0.040484   0.005163  -7.842 4.81e-15
+integrazione_verticale_fattBasso            -0.181353   0.013865 -13.080  < 2e-16
+integrazione_verticale_fattMedio            -0.195691   0.015575 -12.564  < 2e-16
+integrazione_verticale_fattAlto             -0.187656   0.017348 -10.817  < 2e-16
+integrazione_verticale_fattMolto Alto       -0.314408   0.020500 -15.337  < 2e-16
+rapporto_indebitamento                       0.023213   0.004075   5.697 1.25e-08
+macroareaIsole                              -0.079794   0.020432  -3.905 9.46e-05
+macroareaNord-Est                            0.045867   0.010706   4.284 1.85e-05
+macroareaNord-Ovest                          0.058331   0.010281   5.674 1.43e-08
+macroareaSud                                -0.041464   0.013568  -3.056 0.002248
+patrimonio_netto_migl_EUR                   -0.055393   0.004592 -12.063  < 2e-16
+indice_indipendenza_finanziaria_percentuale -0.071375   0.006174 -11.560  < 2e-16
+log_EBITDA_migl_EUR                         -0.112993   0.008594 -13.148  < 2e-16
+flusso_cassa_gestione_migl_EUR               0.024844   0.006558   3.789 0.000152
+log_ricavi_vendite_migl_EUR                  0.118840   0.007113  16.708  < 2e-16
+durata_media_crediti_lordo_IVA_gg           -0.093398   0.006391 -14.614  < 2e-16
+posizione_finanziaria_netta_migl_EUR        -0.015359   0.004219  -3.640 0.000274
+valore_aggiunto_pro_capite_EUR              -0.018316   0.005414  -3.383 0.000719
+incidenza_circolante_operativo_percentuale   0.134515   0.008865  15.174  < 2e-16
+giacenza_media_scorte_gg                    -0.097070   0.007740 -12.542  < 2e-16
+indice_liquidita                             0.040337   0.005058   7.975 1.66e-15
+                                               
+(Intercept)                                 ***
+ROI_percentuale                             ***
+ROE_percentuale                             ***
+ROS_percentuale                             ***
+rendimento_dipendenti                       ***
+integrazione_verticale_fattBasso            ***
+integrazione_verticale_fattMedio            ***
+integrazione_verticale_fattAlto             ***
+integrazione_verticale_fattMolto Alto       ***
+rapporto_indebitamento                      ***
+macroareaIsole                              ***
+macroareaNord-Est                           ***
+macroareaNord-Ovest                         ***
+macroareaSud                                ** 
+patrimonio_netto_migl_EUR                   ***
+indice_indipendenza_finanziaria_percentuale ***
+log_EBITDA_migl_EUR                         ***
+flusso_cassa_gestione_migl_EUR              ***
+log_ricavi_vendite_migl_EUR                 ***
+durata_media_crediti_lordo_IVA_gg           ***
+posizione_finanziaria_netta_migl_EUR        ***
+valore_aggiunto_pro_capite_EUR              ***
+incidenza_circolante_operativo_percentuale  ***
+giacenza_media_scorte_gg                    ***
+indice_liquidita                            ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3874 on 12322 degrees of freedom
+Multiple R-squared:  0.8406,	Adjusted R-squared:  0.8403 
+F-statistic:  2708 on 24 and 12322 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento (glance) ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik    AIC    BIC
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl>  <dbl>  <dbl>
+1     0.841         0.840 0.387     2708.       0    24 -5800. 11651. 11844.
+# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>
+
+Variabili selezionate: ROI_percentuale, ROE_percentuale, ROS_percentuale, rendimento_dipendenti, integrazione_verticale_fatt, rapporto_indebitamento, macroarea, patrimonio_netto_migl_EUR, indice_indipendenza_finanziaria_percentuale, log_EBITDA_migl_EUR, flusso_cassa_gestione_migl_EUR, log_ricavi_vendite_migl_EUR, durata_media_crediti_lordo_IVA_gg, posizione_finanziaria_netta_migl_EUR, valore_aggiunto_pro_capite_EUR, incidenza_circolante_operativo_percentuale, giacenza_media_scorte_gg, indice_liquidita 
+
+===========================================
+
+---- MODELLO PER: Grande ----
+
+
+Call:
+lm(formula = frm_new, data = data_all)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.66708 -0.22830  0.07763  0.25508  2.04073 
+
+Coefficients:
+                                             Estimate Std. Error t value Pr(>|t|)
+(Intercept)                                  0.149716   0.022943   6.526 7.86e-11
+ROI_percentuale                              0.649347   0.016943  38.324  < 2e-16
+ROE_percentuale                              0.291617   0.009862  29.569  < 2e-16
+integrazione_verticale_fattBasso            -0.157973   0.027593  -5.725 1.13e-08
+integrazione_verticale_fattMedio            -0.187760   0.028721  -6.537 7.26e-11
+integrazione_verticale_fattAlto             -0.184513   0.030070  -6.136 9.50e-10
+integrazione_verticale_fattMolto Alto       -0.347452   0.033339 -10.422  < 2e-16
+rapporto_indebitamento                       0.050501   0.008927   5.657 1.68e-08
+ROA_percentuale                              0.104329   0.023086   4.519 6.43e-06
+ROS_percentuale                             -0.202202   0.017533 -11.532  < 2e-16
+valore_aggiunto_pro_capite_EUR              -0.026504   0.009726  -2.725 0.006467
+durata_media_crediti_lordo_IVA_gg           -0.146219   0.014478 -10.100  < 2e-16
+incidenza_circolante_operativo_percentuale   0.178257   0.019321   9.226  < 2e-16
+giacenza_media_scorte_gg                    -0.113591   0.015530  -7.314 3.26e-13
+indice_indipendenza_finanziaria_percentuale -0.057399   0.013033  -4.404 1.10e-05
+indice_corrente                              0.039503   0.010802   3.657 0.000259
+                                               
+(Intercept)                                 ***
+ROI_percentuale                             ***
+ROE_percentuale                             ***
+integrazione_verticale_fattBasso            ***
+integrazione_verticale_fattMedio            ***
+integrazione_verticale_fattAlto             ***
+integrazione_verticale_fattMolto Alto       ***
+rapporto_indebitamento                      ***
+ROA_percentuale                             ***
+ROS_percentuale                             ***
+valore_aggiunto_pro_capite_EUR              ** 
+durata_media_crediti_lordo_IVA_gg           ***
+incidenza_circolante_operativo_percentuale  ***
+giacenza_media_scorte_gg                    ***
+indice_indipendenza_finanziaria_percentuale ***
+indice_corrente                             ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4413 on 3178 degrees of freedom
+Multiple R-squared:  0.8079,	Adjusted R-squared:  0.807 
+F-statistic: 890.9 on 15 and 3178 DF,  p-value: < 2.2e-16
+
+
+--- Statistiche di adattamento (glance) ---
+# A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC deviance
+      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>  <dbl> <dbl> <dbl>    <dbl>
+1     0.808         0.807 0.441      891.       0    15 -1912. 3857. 3960.     619.
+# ℹ 2 more variables: df.residual <int>, nobs <int>
+
+Variabili selezionate: ROI_percentuale, ROE_percentuale, integrazione_verticale_fatt, rapporto_indebitamento, ROA_percentuale, ROS_percentuale, valore_aggiunto_pro_capite_EUR, durata_media_crediti_lordo_IVA_gg, incidenza_circolante_operativo_percentuale, giacenza_media_scorte_gg, indice_indipendenza_finanziaria_percentuale, indice_corrente 
+
+===========================================
+
+
+> sink()

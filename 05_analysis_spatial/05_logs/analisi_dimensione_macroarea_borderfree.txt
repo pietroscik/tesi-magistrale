@@ -1,0 +1,163 @@
+=== LOG: analisi_dimensione_macroarea_borderfree ===
+Data/Ora avvio: 2025-11-08 19:24:44 
+
+
+=== Analisi: Nord-Est × Micro ===
+k* (STRICT) = 34   |  k_full (border-free) = 59 
+Completato: Micro_Nord-Est 
+
+=== Analisi: Nord-Est × Piccola ===
+k* (STRICT) = 48   |  k_full (border-free) = 59 
+Completato: Piccola_Nord-Est 
+
+=== Analisi: Nord-Est × Media ===
+k* (STRICT) = 42   |  k_full (border-free) = 59 
+Completato: Media_Nord-Est 
+
+=== Analisi: Nord-Est × Grande ===
+k* (STRICT) = 22   |  k_full (border-free) = 59 
+Completato: Grande_Nord-Est 
+
+=== Analisi: Nord-Ovest × Micro ===
+k* (STRICT) = 16   |  k_full (border-free) = 59 
+Completato: Micro_Nord-Ovest 
+
+=== Analisi: Nord-Ovest × Piccola ===
+k* (STRICT) = 24   |  k_full (border-free) = 59 
+Completato: Piccola_Nord-Ovest 
+
+=== Analisi: Nord-Ovest × Media ===
+k* (STRICT) = 56   |  k_full (border-free) = 59 
+Completato: Media_Nord-Ovest 
+
+=== Analisi: Nord-Ovest × Grande ===
+k* (STRICT) = 56   |  k_full (border-free) = 59 
+Completato: Grande_Nord-Ovest 
+
+=== Analisi: Sud × Micro ===
+k* (STRICT) = 12   |  k_full (border-free) = 59 
+Completato: Micro_Sud 
+
+=== Analisi: Sud × Piccola ===
+k* (STRICT) = 26   |  k_full (border-free) = 59 
+Completato: Piccola_Sud 
+
+=== Analisi: Sud × Media ===
+k* (STRICT) = 54   |  k_full (border-free) = 59 
+Completato: Media_Sud 
+
+=== Analisi: Sud × Grande ===
+k* (STRICT) = 52   |  k_full (border-free) = 59 
+Completato: Grande_Sud 
+
+=== Analisi: Centro × Micro ===
+k* (STRICT) = 12   |  k_full (border-free) = 59 
+Completato: Micro_Centro 
+
+=== Analisi: Centro × Piccola ===
+k* (STRICT) = 52   |  k_full (border-free) = 59 
+Completato: Piccola_Centro 
+
+=== Analisi: Centro × Media ===
+k* (STRICT) = 50   |  k_full (border-free) = 59 
+Completato: Media_Centro 
+
+=== Analisi: Centro × Grande ===
+k* (STRICT) = 40   |  k_full (border-free) = 59 
+Completato: Grande_Centro 
+
+=== Analisi: Isole × Micro ===
+k* (STRICT) = 29   |  k_full (border-free) = 59 
+Completato: Micro_Isole 
+
+=== Analisi: Isole × Piccola ===
+k* (STRICT) = 28   |  k_full (border-free) = 59 
+Completato: Piccola_Isole 
+
+=== Analisi: Isole × Media ===
+k* (STRICT) = 30   |  k_full (border-free) = 59 
+Completato: Media_Isole 
+
+=== Analisi: Isole × Grande ===
+k* (STRICT) = 26   |  k_full (border-free) = 59 
+Completato: Grande_Isole 
+
+=== Analisi: Nord-Est × Micro ===
+k* = 34 
+Completato: Micro_Nord-Est 
+
+=== Analisi: Nord-Est × Piccola ===
+k* = 48 
+Completato: Piccola_Nord-Est 
+
+=== Analisi: Nord-Est × Media ===
+k* = 42 
+Completato: Media_Nord-Est 
+
+=== Analisi: Nord-Est × Grande ===
+k* = 26 
+Completato: Grande_Nord-Est 
+
+=== Analisi: Nord-Ovest × Micro ===
+k* = 16 
+Completato: Micro_Nord-Ovest 
+
+=== Analisi: Nord-Ovest × Piccola ===
+k* = 24 
+Completato: Piccola_Nord-Ovest 
+
+=== Analisi: Nord-Ovest × Media ===
+k* = 56 
+Completato: Media_Nord-Ovest 
+
+=== Analisi: Nord-Ovest × Grande ===
+k* = 56 
+Completato: Grande_Nord-Ovest 
+
+=== Analisi: Sud × Micro ===
+k* = 12 
+Completato: Micro_Sud 
+
+=== Analisi: Sud × Piccola ===
+k* = 26 
+Completato: Piccola_Sud 
+
+=== Analisi: Sud × Media ===
+k* = 38 
+Completato: Media_Sud 
+
+=== Analisi: Sud × Grande ===
+k* = 18 
+Completato: Grande_Sud 
+
+=== Analisi: Centro × Micro ===
+k* = 12 
+Completato: Micro_Centro 
+
+=== Analisi: Centro × Piccola ===
+k* = 46 
+Completato: Piccola_Centro 
+
+=== Analisi: Centro × Media ===
+k* = 52 
+Completato: Media_Centro 
+
+=== Analisi: Centro × Grande ===
+k* = 40 
+Completato: Grande_Centro 
+
+=== Analisi: Isole × Micro ===
+k* = 29 
+Completato: Micro_Isole 
+
+=== Analisi: Isole × Piccola ===
+k* = 24 
+Completato: Piccola_Isole 
+
+=== Analisi: Isole × Media ===
+k* = 18 
+Completato: Media_Isole 
+
+=== Analisi: Isole × Grande ===
+k* = 26 
+Completato: Grande_Isole 

@@ -1,0 +1,5 @@
+=== LOG: mappe_aggregate_locali ===
+Data/Ora avvio: 2025-11-09 12:32:38 
+
+Creazione mappe aggregate dei cluster locali...
+Mappe aggregate finali salvate in: C:/Users/39329/OneDrive - Uniparthenope/tesi/Tesi Magistrale/Tesi-Magistrale_backup0/05_analysis_spatial/02_maps 

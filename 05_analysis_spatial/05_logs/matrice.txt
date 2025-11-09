@@ -1,0 +1,21 @@
+=== LOG: matrice ===
+Data/Ora avvio: 2025-11-08 16:54:55 
+
+Neighbour list object:
+Number of regions: 25135 
+Number of nonzero links: 1482965 
+Percentage nonzero weights: 0.2347324 
+Average number of links: 59 
+Non-symmetric neighbours list
+Characteristics of weights list object:
+Neighbour list object:
+Number of regions: 25135 
+Number of nonzero links: 1482965 
+Percentage nonzero weights: 0.2347324 
+Average number of links: 59 
+Non-symmetric neighbours list
+
+Weights style: W 
+Weights constants summary:
+      n        nn    S0       S1       S2
+W 25135 631768225 25135 748.0531 102931.7

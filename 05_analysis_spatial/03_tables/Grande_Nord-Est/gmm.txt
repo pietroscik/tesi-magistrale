@@ -1,0 +1,52 @@
+
+Call:
+spatialreg::GMerrorsar(formula = fml, data = sf_sub, listw = lw, 
+    zero.policy = TRUE)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-1.446186 -0.141955  0.099429  0.213498  1.488972 
+
+Type: GM SAR estimator
+Coefficients: (GM standard errors) 
+                                              Estimate Std. Error
+(Intercept)                                  0.1274015  0.0393205
+ROI_percentuale                              0.6569521  0.0232486
+integrazione_verticale                      -0.2239437  0.0256884
+ROE_percentuale                              0.2986398  0.0199490
+ROS_percentuale                             -0.1450333  0.0229762
+rendimento_dipendenti                       -0.0447257  0.0250060
+indice_indipendenza_finanziaria_percentuale  0.0278059  0.0225667
+log_ricavi_vendite_migl_EUR                 -0.0234363  0.0226562
+durata_media_debiti_lordo_IVA_gg            -0.0504022  0.0185844
+rapporto_indebitamento                       0.1645278  0.0401541
+valore_aggiunto_pro_capite_EUR               0.0046258  0.0179424
+durata_media_crediti_lordo_IVA_gg            0.0469711  0.0195628
+posizione_finanziaria_netta_migl_EUR         0.0070517  0.0041679
+indice_liquidita                             0.0231479  0.0179168
+patrimonio_netto_migl_EUR                   -0.0214498  0.0121204
+utile_netto_migl_EUR                         0.0189836  0.0105809
+                                            z value  Pr(>|z|)
+(Intercept)                                  3.2401  0.001195
+ROI_percentuale                             28.2577 < 2.2e-16
+integrazione_verticale                      -8.7177 < 2.2e-16
+ROE_percentuale                             14.9702 < 2.2e-16
+ROS_percentuale                             -6.3123 2.749e-10
+rendimento_dipendenti                       -1.7886  0.073680
+indice_indipendenza_finanziaria_percentuale  1.2322  0.217887
+log_ricavi_vendite_migl_EUR                 -1.0344  0.300934
+durata_media_debiti_lordo_IVA_gg            -2.7121  0.006686
+rapporto_indebitamento                       4.0974 4.178e-05
+valore_aggiunto_pro_capite_EUR               0.2578  0.796551
+durata_media_crediti_lordo_IVA_gg            2.4010  0.016348
+posizione_finanziaria_netta_migl_EUR         1.6919  0.090665
+indice_liquidita                             1.2920  0.196368
+patrimonio_netto_migl_EUR                   -1.7697  0.076771
+utile_netto_migl_EUR                         1.7941  0.072790
+
+Lambda: 0.11385 (standard error): 0.60931 (z-value): 0.18685
+Residual variance (sigma squared): 0.14511, (sigma: 0.38094)
+GM argmin sigma squared: 0.14513
+Number of observations: 929 
+Number of parameters estimated: 18 
+

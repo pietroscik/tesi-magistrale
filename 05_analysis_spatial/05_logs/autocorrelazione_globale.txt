@@ -1,0 +1,121 @@
+=== LOG: autocorrelazione_globale ===
+Data/Ora avvio: 2025-11-08 17:03:30 
+
+
+	Moran I test under randomisation
+
+data:  var_int  
+weights: listw_knn    
+
+Moran I statistic standard deviate = 7.9311, p-value =
+1.086e-15
+alternative hypothesis: greater
+sample estimates:
+Moran I statistic       Expectation          Variance 
+     8.578347e-03     -3.978674e-05      1.180746e-06 
+
+
+	Geary C test under randomisation
+
+data:  var_int 
+weights: listw_knn   
+
+Geary C statistic standard deviate = 1.4382, p-value =
+0.07519
+alternative hypothesis: Expectation greater than statistic
+sample estimates:
+Geary C statistic       Expectation          Variance 
+     9.974793e-01      1.000000e+00      3.072090e-06 
+
+
+	Monte-Carlo simulation of Moran I
+
+data:  var_int 
+weights: listw_knn  
+number of simulations + 1: 1000 
+
+statistic = 0.0085783, observed rank = 1000, p-value =
+0.001
+alternative hypothesis: greater
+
+
+	Moran I test under randomisation
+
+data:  var_int  
+weights: listw_knn    
+
+Moran I statistic standard deviate = 7.9311, p-value =
+1.086e-15
+alternative hypothesis: greater
+sample estimates:
+Moran I statistic       Expectation          Variance 
+     8.578347e-03     -3.978674e-05      1.180746e-06 
+
+
+	Geary C test under randomisation
+
+data:  var_int 
+weights: listw_knn   
+
+Geary C statistic standard deviate = 1.4382, p-value =
+0.07519
+alternative hypothesis: Expectation greater than statistic
+sample estimates:
+Geary C statistic       Expectation          Variance 
+     9.974793e-01      1.000000e+00      3.072090e-06 
+
+
+	Monte-Carlo simulation of Moran I
+
+data:  var_int 
+weights: listw_knn  
+number of simulations + 1: 1000 
+
+statistic = 0.0085783, observed rank = 1000, p-value =
+0.001
+alternative hypothesis: greater
+
+            Length Class  Mode     
+statistic   1      -none- numeric  
+p.value     1      -none- numeric  
+estimate    3      -none- numeric  
+alternative 1      -none- character
+method      1      -none- character
+data.name   1      -none- character
+            Length Class  Mode     
+statistic   1      -none- numeric  
+p.value     1      -none- numeric  
+estimate    3      -none- numeric  
+alternative 1      -none- character
+method      1      -none- character
+data.name   1      -none- character
+            Length Class  Mode     
+statistic      1   -none- numeric  
+parameter      1   -none- numeric  
+p.value        1   -none- numeric  
+alternative    1   -none- character
+method         1   -none- character
+data.name      1   -none- character
+res         1000   -none- numeric  
+null device 
+          1 
+Quota cluster significativi: 10.54 %
+
+ High-High    Low-Low   High-Low   Low-High Non signif 
+       600        839        671        538      22487 
+
+Coldspot 99% Coldspot 95%   Non signif  Hotspot 95%  Hotspot 99% 
+        1510          776        20747          964         1138 
+null device 
+          1 
+ℹ The package "hexbin" is required for `stat_bin_hex()`.
+✖ Would you like to install it?
+
+1: Yes
+2: No
+
+Digita una voce dal menu, o 0 per uscire
+pacchetto ‘hexbin’ aperto con successo con controllo somme MD5
+
+I pacchetti binari scaricati sono in
+	C:\Users\39329\AppData\Local\Temp\Rtmp4i8yC9\downloaded_packages

@@ -1,0 +1,226 @@
+=== LOG: analisi_regressiva_dimensione_macroarea ===
+Data/Ora avvio: 2025-11-08 20:46:53 
+
+
+=== Analisi: Nord-Est × Micro ===
+Called from: data.frame(moran_I = mi, moran_p = p_or_na(diag$moran), moran_mc_p = p_or_na(diag$moran_mc), d    geary_C = gi, geary_p = p_or_na(diag$geary), AD_p = if (is.null(diag$normality)) NA_real_     geary_C = gi, geary_p = p_or_na(diag        error = function(e) NA_real_), BP_p = p_or_na(diag$bp), 
+    LMlag_robust_p = tryCatch(diag$lm_tests$RLMlag$p.value, error = function(e) NA_real_), 
+    LMerr_robust_p = tryCatch(diag$lm_tests$RLMerr$p.value, error = function(e) NA_real_), 
+    RESET_p = p_or_na(diag$reset))
+
+=== Analisi: Nord-Est × Micro ===
+Called from: data.frame(moran_I = mi, moran_p = p_or_na(diag$moran), moran_mc_p = p_or_na(diag$moran_mc), d    geary_C = gi, geary_p = p_or_na(diag$geary), AD_p = if (is.null(diag$normality)) NA_real_     geary_C = gi, geary_p = p_or_na(diag        error = function(e) NA_real_), BP_p = p_or_na(diag$bp), 
+    LMlag_robust_p = tryCatch(diag$lm_tests$RLMlag$p.value, error = function(e) NA_real_), 
+    LMerr_robust_p = tryCatch(diag$lm_tests$RLMerr$p.value, error = function(e) NA_real_), 
+    RESET_p = p_or_na(diag$reset))
+
+=== Analisi: Nord-Est × Micro ===
+
+=== REGRESSIONI COMPLETATE PER: Micro_Nord-Est ===
+
+=== Analisi: Nord-Est × Piccola ===
+
+=== REGRESSIONI COMPLETATE PER: Piccola_Nord-Est ===
+
+=== Analisi: Nord-Est × Media ===
+
+=== REGRESSIONI COMPLETATE PER: Media_Nord-Est ===
+
+=== Analisi: Nord-Est × Grande ===
+
+=== REGRESSIONI COMPLETATE PER: Grande_Nord-Est ===
+
+=== Analisi: Nord-Ovest × Micro ===
+
+=== REGRESSIONI COMPLETATE PER: Micro_Nord-Ovest ===
+
+=== Analisi: Nord-Ovest × Piccola ===
+
+=== REGRESSIONI COMPLETATE PER: Piccola_Nord-Ovest ===
+
+=== Analisi: Nord-Ovest × Media ===
+
+=== REGRESSIONI COMPLETATE PER: Media_Nord-Ovest ===
+
+=== Analisi: Nord-Ovest × Grande ===
+
+=== REGRESSIONI COMPLETATE PER: Grande_Nord-Ovest ===
+
+=== Analisi: Sud × Micro ===
+
+=== REGRESSIONI COMPLETATE PER: Micro_Sud ===
+
+=== Analisi: Sud × Piccola ===
+
+=== REGRESSIONI COMPLETATE PER: Piccola_Sud ===
+
+=== Analisi: Sud × Media ===
+
+=== REGRESSIONI COMPLETATE PER: Media_Sud ===
+
+=== Analisi: Sud × Grande ===
+
+=== REGRESSIONI COMPLETATE PER: Grande_Sud ===
+
+=== Analisi: Centro × Micro ===
+
+=== REGRESSIONI COMPLETATE PER: Micro_Centro ===
+
+=== Analisi: Centro × Piccola ===
+
+=== REGRESSIONI COMPLETATE PER: Piccola_Centro ===
+
+=== Analisi: Centro × Media ===
+
+=== REGRESSIONI COMPLETATE PER: Media_Centro ===
+
+=== Analisi: Centro × Grande ===
+
+=== REGRESSIONI COMPLETATE PER: Grande_Centro ===
+
+=== Analisi: Isole × Micro ===
+
+Subset troppo piccolo per regressioni: Micro_Isole  (n= 30 )
+
+=== Analisi: Isole × Piccola ===
+
+=== REGRESSIONI COMPLETATE PER: Piccola_Isole ===
+
+=== Analisi: Isole × Media ===
+
+=== REGRESSIONI COMPLETATE PER: Media_Isole ===
+
+=== Analisi: Isole × Grande ===
+
+=== REGRESSIONI COMPLETATE PER: Grande_Isole ===
+ ===
+
+=== Analisi: Isole × Grande ===
+
+=== REGRESSIONI COMPLETATE PER: Grande_Isole ===
+
+SCRIPT COMPLETATO – output nella gerarchia delle cartelle.
+
+SCRIPT COMPLETATO – output nella gerarchia delle cartelle.
+=== LOG: mappe_aggregate_locali ===
+Data/Ora avvio: 2025-11-09 12:32:38 
+
+Creazione mappe aggregate dei cluster locali...
+Mappe aggregate finali salvate in: C:/Users/39329/OneDrive - Uniparthenope/tesi/Tesi Magistrale/Tesi-Magistrale_backup0/05_analysis_spatial/02_maps 
+
+SCRIPT COMPLETATO – output nella gerarchia delle cartelle.
+=== LOG: robustezza_e_riepiloghi_finali ===
+Data/Ora avvio: 2025-11-09 12:37:12 
+
+Esecuzione controlli di robustezza finali...
+indexing riepilogo_regressivo_gwr.csv [======] 36.31MB/s, eta:  0s                                                                  Script di robustezza completati.
+
+> # --- Script di Pulizia (Sezione 11) ---
+> 
+> cat("=== Avvio Pulizia File RDS Obsoleti ===\n")
+=== Avvio Pulizia File RDS Obsoleti ===
+
+> # 1. Definisci i nomi dei file da eliminare
+> files_obsoleti <- c("diagnostiche_spaziali.rds", "regressioni_spaziali.rds") #
+
+> # 2. Definisci la directory principale dei subset
+> rds_dir <- file.path(output_dir, "01_rds") #
+
+> # 3. Ottieni l'elenco di tutti i subset (es. "Media_Centro", "Grande_Nord-Ovest")
+> #    (Assumendo che 'nms' esista ancora in memoria dalla Sezione .... [TRUNCATED] 
+
+> # 4. Loop di pulizia
+> for (nm in nms) {
++   for (file_name in files_obsoleti) {
++     
++     # Costruisci il percorso completo del file
++     file_ .... [TRUNCATED] 
+  -> [Micro_Nord-Est] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Micro_Nord-Est] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Piccola_Nord-Est] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Piccola_Nord-Est] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Media_Nord-Est] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Media_Nord-Est] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Grande_Nord-Est] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Grande_Nord-Est] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Micro_Nord-Ovest] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Micro_Nord-Ovest] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Piccola_Nord-Ovest] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Piccola_Nord-Ovest] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Media_Nord-Ovest] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Media_Nord-Ovest] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Grande_Nord-Ovest] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Grande_Nord-Ovest] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Micro_Sud] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Micro_Sud] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Piccola_Sud] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Piccola_Sud] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Media_Sud] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Media_Sud] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Grande_Sud] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Grande_Sud] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Micro_Centro] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Micro_Centro] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Piccola_Centro] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Piccola_Centro] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Media_Centro] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Media_Centro] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Grande_Centro] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Grande_Centro] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Piccola_Isole] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Piccola_Isole] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Media_Isole] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Media_Isole] File obsoleto eliminato: regressioni_spaziali.rds
+  -> [Grande_Isole] File obsoleto eliminato: diagnostiche_spaziali.rds
+  -> [Grande_Isole] File obsoleto eliminato: regressioni_spaziali.rds
+
+> cat("=== Pulizia completata ===\n")
+=== Pulizia completata ===
+
+> # --- Script di Pulizia (Sezione 11) ---
+> 
+> cat("=== Avvio Pulizia File RDS Obsoleti ===\n")
+=== Avvio Pulizia File RDS Obsoleti ===
+
+> # 1. Definisci i nomi dei file da eliminare
+> files_obsoleti <- c("confronto_metriche_modelli") #
+
+> # 2. Definisci la directory principale dei subset
+> rds_dir <- file.path(output_dir, "03_tables") #
+
+> # 3. Ottieni l'elenco di tutti i subset (es. "Media_Centro", "Grande_Nord-Ovest")
+> #    (Assumendo che 'nms' esista ancora in memoria dalla Sezione .... [TRUNCATED] 
+
+> # 4. Loop di pulizia
+> for (nm in nms) {
++   for (file_name in files_obsoleti) {
++     
++     # Costruisci il percorso completo del file
++     file_ .... [TRUNCATED] 
+
+> cat("=== Pulizia completata ===\n")
+=== Pulizia completata ===
+
+> # --- Script di Pulizia (Sezione 11) ---
+> 
+> cat("=== Avvio Pulizia File RDS Obsoleti ===\n")
+=== Avvio Pulizia File RDS Obsoleti ===
+
+> # 1. Definisci i nomi dei file da eliminare
+> files_obsoleti <- c("confronto_metriche_modelli") #
+
+> # 2. Definisci la directory principale dei subset
+> rds_dir <- file.path(output_dir, "03_tables") #
+
+> # 3. Ottieni l'elenco di tutti i subset (es. "Media_Centro", "Grande_Nord-Ovest")
+> #    (Assumendo che 'nms' esista ancora in memoria dalla Sezione .... [TRUNCATED] 
+
+> # 4. Loop di pulizia
+> for (nm in nms) {
++   for (file_name in files_obsoleti) {
++     
++     # Costruisci il percorso completo del file
++     file_ .... [TRUNCATED] 
+
+> cat("=== Pulizia completata ===\n")
+=== Pulizia completata ===

@@ -1,0 +1,121 @@
+
+Call:
+spatialreg::lagsarlm(formula = fml, data = sf_sub, listw = lw, 
+    type = "mixed", zero.policy = TRUE)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-1.058679 -0.207339 -0.012433  0.247747  0.847202 
+
+Type: mixed 
+Coefficients: (asymptotic standard errors) 
+                                                   Estimate
+(Intercept)                                       5.4094849
+ROI_percentuale                                   0.6213216
+integrazione_verticale                           -0.2742918
+ROE_percentuale                                   0.2441144
+ROS_percentuale                                   0.0082475
+rendimento_dipendenti                            -0.0563404
+indice_indipendenza_finanziaria_percentuale      -0.0860472
+log_ricavi_vendite_migl_EUR                       0.1708410
+durata_media_debiti_lordo_IVA_gg                  0.0027290
+rapporto_indebitamento                            0.0155475
+valore_aggiunto_pro_capite_EUR                   -0.0557692
+durata_media_crediti_lordo_IVA_gg                -0.0176864
+posizione_finanziaria_netta_migl_EUR             -3.5170604
+indice_liquidita                                  0.0063637
+patrimonio_netto_migl_EUR                        -3.2693499
+utile_netto_migl_EUR                             -0.7095628
+lag.ROI_percentuale                               2.6190808
+lag.integrazione_verticale                        0.6251978
+lag.ROE_percentuale                               0.6617844
+lag.ROS_percentuale                              -0.1472170
+lag.rendimento_dipendenti                         0.0865524
+lag.indice_indipendenza_finanziaria_percentuale  -0.9525305
+lag.log_ricavi_vendite_migl_EUR                   1.6693540
+lag.durata_media_debiti_lordo_IVA_gg              0.6576701
+lag.rapporto_indebitamento                       -1.4894263
+lag.valore_aggiunto_pro_capite_EUR               -0.7843450
+lag.durata_media_crediti_lordo_IVA_gg            -1.1389261
+lag.posizione_finanziaria_netta_migl_EUR         21.5375338
+lag.indice_liquidita                             -0.1462952
+lag.patrimonio_netto_migl_EUR                   -24.4958188
+lag.utile_netto_migl_EUR                         28.4426907
+                                                 Std. Error
+(Intercept)                                       8.4438206
+ROI_percentuale                                   0.0566177
+integrazione_verticale                            0.0537209
+ROE_percentuale                                   0.0354272
+ROS_percentuale                                   0.0440890
+rendimento_dipendenti                             0.0364431
+indice_indipendenza_finanziaria_percentuale       0.0496901
+log_ricavi_vendite_migl_EUR                       0.0826012
+durata_media_debiti_lordo_IVA_gg                  0.0385867
+rapporto_indebitamento                            0.0522097
+valore_aggiunto_pro_capite_EUR                    0.0429908
+durata_media_crediti_lordo_IVA_gg                 0.0234422
+posizione_finanziaria_netta_migl_EUR              1.9200816
+indice_liquidita                                  0.0318425
+patrimonio_netto_migl_EUR                         1.0984549
+utile_netto_migl_EUR                              2.1537317
+lag.ROI_percentuale                               1.2219389
+lag.integrazione_verticale                        0.9184524
+lag.ROE_percentuale                               0.7645771
+lag.ROS_percentuale                               0.8805570
+lag.rendimento_dipendenti                         0.7651935
+lag.indice_indipendenza_finanziaria_percentuale   0.8362877
+lag.log_ricavi_vendite_migl_EUR                   1.2950658
+lag.durata_media_debiti_lordo_IVA_gg              0.9167499
+lag.rapporto_indebitamento                        1.1638813
+lag.valore_aggiunto_pro_capite_EUR                0.8682573
+lag.durata_media_crediti_lordo_IVA_gg             0.3846048
+lag.posizione_finanziaria_netta_migl_EUR         35.6883369
+lag.indice_liquidita                              0.6511873
+lag.patrimonio_netto_migl_EUR                    17.9733823
+lag.utile_netto_migl_EUR                         40.8044360
+                                                z value  Pr(>|z|)
+(Intercept)                                      0.6406  0.521754
+ROI_percentuale                                 10.9740 < 2.2e-16
+integrazione_verticale                          -5.1059 3.293e-07
+ROE_percentuale                                  6.8906 5.556e-12
+ROS_percentuale                                  0.1871  0.851610
+rendimento_dipendenti                           -1.5460  0.122109
+indice_indipendenza_finanziaria_percentuale     -1.7317  0.083331
+log_ricavi_vendite_migl_EUR                      2.0683  0.038615
+durata_media_debiti_lordo_IVA_gg                 0.0707  0.943618
+rapporto_indebitamento                           0.2978  0.765864
+valore_aggiunto_pro_capite_EUR                  -1.2972  0.194550
+durata_media_crediti_lordo_IVA_gg               -0.7545  0.450569
+posizione_finanziaria_netta_migl_EUR            -1.8317  0.066992
+indice_liquidita                                 0.1998  0.841598
+patrimonio_netto_migl_EUR                       -2.9763  0.002917
+utile_netto_migl_EUR                            -0.3295  0.741810
+lag.ROI_percentuale                              2.1434  0.032083
+lag.integrazione_verticale                       0.6807  0.496056
+lag.ROE_percentuale                              0.8656  0.386734
+lag.ROS_percentuale                             -0.1672  0.867223
+lag.rendimento_dipendenti                        0.1131  0.909942
+lag.indice_indipendenza_finanziaria_percentuale -1.1390  0.254704
+lag.log_ricavi_vendite_migl_EUR                  1.2890  0.197394
+lag.durata_media_debiti_lordo_IVA_gg             0.7174  0.473132
+lag.rapporto_indebitamento                      -1.2797  0.200648
+lag.valore_aggiunto_pro_capite_EUR              -0.9034  0.366337
+lag.durata_media_crediti_lordo_IVA_gg           -2.9613  0.003064
+lag.posizione_finanziaria_netta_migl_EUR         0.6035  0.546183
+lag.indice_liquidita                            -0.2247  0.822244
+lag.patrimonio_netto_migl_EUR                   -1.3629  0.172916
+lag.utile_netto_migl_EUR                         0.6970  0.485772
+
+Rho: -3.2792, LR test value: 10.446, p-value: 0.0012294
+Asymptotic standard error: 0.78343
+    z-value: -4.1857, p-value: 2.8427e-05
+Wald statistic: 17.52, p-value: 2.8427e-05
+
+Log likelihood: -44.52674 for mixed model
+ML residual variance (sigma squared): 0.10784, (sigma: 0.32839)
+Number of observations: 128 
+Number of parameters estimated: 33 
+AIC: 155.05, (AIC for lm: 163.5)
+LM test for residual autocorrelation
+test value: 2.3609, p-value: 0.12441
+

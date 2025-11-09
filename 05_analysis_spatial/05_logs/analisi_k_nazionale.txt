@@ -1,0 +1,5 @@
+=== LOG: analisi_k_nazionale ===
+Data/Ora avvio: 2025-11-08 16:41:08 
+
+
+k ottimale selezionato: 59 

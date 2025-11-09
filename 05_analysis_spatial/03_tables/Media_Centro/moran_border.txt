@@ -1,0 +1,13 @@
+
+	Moran I test under randomisation
+
+data:  sf_sub$ISP_bn  
+weights: Wv$W_border    
+
+Moran I statistic standard deviate = -0.025128, p-value =
+0.51
+alternative hypothesis: greater
+sample estimates:
+Moran I statistic       Expectation          Variance 
+    -5.769021e-04     -4.761905e-04      1.606402e-05 
+
