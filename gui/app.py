@@ -2,6 +2,20 @@
 Dashboard Interattiva per Analisi Spaziale delle Performance delle Imprese Italiane
 Tesi di Laurea Magistrale - Pietro Maietta
 """
+# --- BOOTSTRAP DEPENDENCIES (runs only if missing) ---
+import sys, subprocess, importlib
+
+def _ensure(spec: str, import_name: str | None = None):
+    name = import_name or spec.split("==")[0].split(">=")[0].split("<")[0]
+    try:
+        importlib.import_module(name)
+    except ImportError:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", spec])
+        importlib.invalidate_caches()
+
+# Garantisce che i grafici non esplodano se Cloud ignora requirements.txt
+_ensure("plotly>=5.24,<6", "plotly")
+_ensure("matplotlib>=3.9", "matplotlib")
 
 import os
 from pathlib import Path
