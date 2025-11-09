@@ -72,3 +72,48 @@ Ogni sottocartella (es. `Media_Centro/`) contiene i file di dati intermedi:
 
 Per controllare l'integrità degli output della pipeline (Sezioni 1-10), eseguire lo script:
 `check_output_full.R`
+
+---
+
+## 📊 Dashboard Interattiva Streamlit
+
+È disponibile una dashboard interattiva sviluppata con Streamlit per visualizzare e esplorare i risultati dell'analisi spaziale.
+
+### Installazione
+
+1. Assicurarsi di avere Python 3.8+ installato
+2. Installare le dipendenze:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Avvio della Dashboard
+
+Per avviare la dashboard, eseguire:
+
+```bash
+streamlit run app.py
+```
+
+La dashboard sarà disponibile nel browser all'indirizzo `http://localhost:8501`
+
+### Funzionalità della Dashboard
+
+La dashboard offre diverse sezioni per esplorare i risultati:
+
+1. **🏠 Overview**: Panoramica generale dell'analisi e statistiche principali
+2. **📍 Analisi LISA**: Visualizzazione dei cluster LISA (High-High, Low-Low, etc.)
+3. **🔥 Hotspot Gi\***: Analisi degli hotspot e coldspot statisticamente significativi
+4. **📈 Modelli Econometrici**: Confronto tra modelli OLS, SAR, SDM e GMM
+5. **🌍 Indice di Moran**: Analisi dell'autocorrelazione spaziale globale
+6. **🗺️ Mappe Spaziali**: Download e visualizzazione delle mappe PDF generate
+
+### Caratteristiche
+
+- Interfaccia interattiva e responsive
+- Filtri dinamici per area geografica e dimensione delle imprese
+- Visualizzazioni grafiche con Plotly
+- Tabelle interattive dei dati
+- Download diretto delle mappe PDF
+- Confronto Strict vs Border per tutte le analisi
