@@ -14,7 +14,7 @@ def test_streamlit_app():
     print("Testing Streamlit dashboard...")
     
     # Check if app.py exists
-    app_path = Path("app.py")
+    app_path = Path("gui/app.py")
     if not app_path.exists():
         print("❌ Error: app.py not found")
         return False
