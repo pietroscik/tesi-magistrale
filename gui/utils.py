@@ -10,8 +10,7 @@ MAPS_DIR = ROOT / "05_analysis_spatial" / "02_maps"
 @st.cache_data(ttl=600)
 def load_csv(filename: str) -> pd.DataFrame | None:
     fp = DATA_DIR / filename
-    if not fp.exists():
-        return None
+    if not fp.exists(): return None
     try:
         return pd.read_csv(fp, engine="pyarrow")
     except Exception:
@@ -24,21 +23,18 @@ def get_available_pdfs() -> list[str]:
     return []
 
 def coerce_categories(df: pd.DataFrame | None) -> pd.DataFrame | None:
-    if df is None:
-        return None
-    for c in ["Subset", "Area", "Dimensione", "model", "variante"]:
+    if df is None: return None
+    for c in ["Subset","Area","Dimensione","model","variante"]:
         if c in df.columns:
             df[c] = df[c].astype("category")
     return df
 
 def text_filter(df: pd.DataFrame, placeholder="Cerca...") -> pd.DataFrame:
     q = st.text_input(placeholder).strip().lower()
-    if not q:
-        return df
+    if not q: return df
     mask = pd.Series(False, index=df.index)
     for c in df.columns:
-        s = df[c].astype(str).str.lower()
-        mask = mask | s.str.contains(q, na=False)
+        mask |= df[c].astype(str).str.lower().str.contains(q, na=False)
     return df[mask]
 
 def download_df_button(df: pd.DataFrame, filename: str):
