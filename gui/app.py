@@ -2,6 +2,13 @@
 Home – Dashboard Interattiva per Analisi Spaziale (ISP)
 Tesi di Laurea Magistrale - Pietro Maietta
 """
+# --- PATH GUARD: assicura che la root del repo sia in sys.path ---
+import sys, pathlib, os
+APP_DIR = pathlib.Path(__file__).resolve().parent           # .../gui
+ROOT_DIR = APP_DIR.parent                                   # repo root
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+# ---------------------------------------------------------------
 # bootstrap leggero per sicurezza su Cloud
 import sys, subprocess, importlib
 def _ensure(spec, import_name=None):
