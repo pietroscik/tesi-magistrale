@@ -1,4 +1,6 @@
 # Analisi Spaziale delle Performance delle Imprese Italiane
+
+> 📚 **Stato**: Lavoro accademico completato — base metodologica dei progetti successivi (LISA, Moran); conservato come riferimento.
 # Tesi di Laurea Magistrale - Pietro Maietta
 
 Questo repository contiene il codice R per un'analisi econometrica e spaziale delle performance delle imprese italiane, utilizzando l'indice ISP (Indice di Sostenibilità Potenziale) come variabile dipendente.
@@ -34,7 +36,8 @@ La pipeline è suddivisa in fasi logiche, progettate per essere eseguite in sequ
 * **Scopo:** Il cuore dell'analisi. Utilizza le funzioni di `utils_spatial.R` per eseguire l'intera pipeline spaziale.
 * **Sezioni Chiave:**
     * **Sez. 3-4:** Analisi Nazionale (il "telescopio").
-    * **Sez. 6-7:** Analisi Locale per subset (il "microscopio"). Esegue il confronto **Strict vs. Border** per misurare l'effetto confine.
+    * **Sez. 6-7:** Analisi Locale per subset (il "microscopio"). Esegue il confronto **Strict vs. B
+order** per misurare l'effetto confine.
     * **Sez. 8:** Pipeline di regressione (OLS $\rightarrow$ SAR/SDM $\rightarrow$ GWR). Esegue GWR solo se giustificato (`gwr_eligible`) dai residui dei modelli globali.
     * **Sez. 9:** Creazione delle **Mappe Aggregate Finali** (es. `MAPPA_FINALE_LISA_AGG_STRICT.pdf`).
     * **Sez. 10:** Test di robustezza (es. correzione FDR e analisi dei residui GWR).
@@ -77,7 +80,8 @@ Per controllare l'integrità degli output della pipeline (Sezioni 1-10), eseguir
 
 ## 📊 Dashboard Interattiva Streamlit
 
-È disponibile una dashboard interattiva sviluppata con Streamlit per visualizzare e esplorare i risultati dell'analisi spaziale.
+È disponib
+ile una dashboard interattiva sviluppata con Streamlit per visualizzare e esplorare i risultati dell'analisi spaziale.
 
 ### 🌐 Demo Online
 
